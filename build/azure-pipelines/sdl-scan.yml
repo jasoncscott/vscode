@@ -103,7 +103,9 @@ stages:
           - script: node build/azure-pipelines/distro/mixin-quality
             displayName: Mixin distro quality
             env:
-              VSCODE_QUALITY: insider
+              VSCODE_QUALITY: stable
+
+          - template: ../common/install-builtin-extensions.yml
 
           - powershell: yarn compile
             displayName: Compile
