@@ -105,7 +105,7 @@ stages:
             env:
               VSCODE_QUALITY: stable
 
-          - template: ../common/install-builtin-extensions.yml
+          - template: ./common/install-builtin-extensions.yml
 
           - powershell: yarn compile
             displayName: Compile
